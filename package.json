@@ -1,0 +1,9 @@
+{
+  "name": "florax-vercel-deployer",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Minimal Vercel website deployer with URL and QR output.",
+  "scripts": {
+    "dev": "vercel dev"
+  }
+}

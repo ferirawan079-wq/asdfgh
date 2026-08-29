@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b14">
+  <title>FLORAX Deploy</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <video id="heroVideo" autoplay muted loop playsinline></video>
+      <div class="shade"></div>
+
+      <div class="hero-content">
+        <span class="brand">FLORAX</span>
+        <h1>Deploy to Vercel.</h1>
+        <p>Upload website → dapat URL + QR.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <label class="label" for="projectName">PROJECT</label>
+      <div class="project">
+        <input id="projectName" placeholder="my-project" maxlength="60" autocomplete="off">
+        <span>.vercel.app</span>
+      </div>
+
+      <div class="tabs">
+        <button class="tab active" data-mode="single">HTML</button>
+        <button class="tab" data-mode="folder">FOLDER</button>
+      </div>
+
+      <label class="drop" id="drop">
+        <input id="files" type="file" hidden>
+        <strong id="dropTitle">Pilih index.html</strong>
+        <small id="dropText">Single file</small>
+      </label>
+
+      <div class="files" id="fileList"></div>
+
+      <button class="deploy" id="deploy">
+        <span id="deployText">Deploy</span>
+      </button>
+
+      <div class="status hidden" id="status"></div>
+
+      <div class="result hidden" id="result">
+        <div>
+          <span class="label">LIVE URL</span>
+          <a id="url" target="_blank" rel="noopener"></a>
+        </div>
+        <img id="qr" alt="QR Code">
+        <div class="actions">
+          <button id="copy">Copy URL</button>
+          <a id="open" target="_blank" rel="noopener">Open</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>FLORAX · Vercel Deployer</footer>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
